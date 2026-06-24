@@ -17,6 +17,23 @@
       "problemMatcher": [
         "$cap-hdi-bind-handler"
       ]
+    },
+    {
+      "label": "cds-deploy-to-hana-sap-cap-yt-btp_be_demo-btp_be_demo-db",
+      "type": "shell",
+      "command": "cds",
+      "args": [
+        "deploy",
+        "--to",
+        "hana:btp_be_demo-db"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        "$cap-hdi-bind-handler"
+      ]
     }
   ]
 }
