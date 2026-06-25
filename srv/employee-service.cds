@@ -2,6 +2,7 @@ namespace com.btp_be_demo;
 
 using com.btp_be_demo as empdb from '../db/employee-dbmodel';
 
+@requires: 'authenticated-user'
 service EmployeeService {
 
     @odata.draft.enabled
