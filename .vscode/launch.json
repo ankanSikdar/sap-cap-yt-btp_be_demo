@@ -1,4 +1,25 @@
 {
   "version": "0.2.0",
-  "configurations": []
+  "configurations": [
+    {
+      "name": "Run sap-cap-yt-btp_be_demo",
+      "request": "launch",
+      "type": "node",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "cds",
+      "args": [
+        "serve",
+        "--in-memory?"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "envFile": "${workspaceFolder}/.env1",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
 }
