@@ -1,6 +1,6 @@
 {
     "central_db_employee": {
-        "object_onwer": {
+        "object_owner": {
             "container_roles": ["BTP_DB_EMPLOYEE::WRITE#"]
         },
         "application_user": {
