@@ -1,6 +1,7 @@
 namespace com.btp_be_demo;
 
 using com.btp_be_demo as empdb from '../db/employee-dbmodel';
+using view.btp_de_demo as empview from '../db/views-dbmodel';
 
 @requires: 'authenticated-user'
 service EmployeeService {
@@ -11,6 +12,9 @@ service EmployeeService {
     entity Departments as select from empdb.DEPARTMENT;
 
     entity CentralDBEmployees as select from empdb.CENTRAL_DB_EMP;
+
+    @readonly
+    entity EmployeeView as select from empview.EMPLOYEEVIEW;
 }
 
 annotate EmployeeService.Employees with @(
