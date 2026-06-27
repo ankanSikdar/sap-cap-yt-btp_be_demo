@@ -22,14 +22,9 @@ modules:
     provides:
       - name: srv-api
         properties:
-          srv-url: '${default-url}'
+          srv-url: "${default-url}"
     requires:
       - name: btp_be_demo-db
-      - name: central_db_employee
-        group: SERVICE_REPLACEMENTS
-        properties:
-          key: central-db-employee
-          service: central-db-service-name
   - name: btp_be_demo-db-deployer
     type: hdb
     path: gen/db
@@ -38,12 +33,12 @@ modules:
     requires:
       - name: btp_be_demo-db
         properties:
-          TARGET_CONTAINER: '~{hdi-container-name}'
+          TARGET_CONTAINER: "~{hdi-container-name}"
       - name: central_db_employee
         group: SERVICE_REPLACEMENTS
         properties:
-          key: central-employee-db
-          service: central-db-service-name
+          key: central_db_employee
+          service: "~{central-db-service-name}"
 resources:
   - name: btp_be_demo-db
     type: com.sap.xs.hdi-container
@@ -51,11 +46,11 @@ resources:
       service: hana
       service-plan: hdi-shared
     properties:
-      hdi-container-name: '${service-name}'
+      hdi-container-name: "${service-name}"
   - name: central_db_employee
     type: org.cloudfoundry.existing-service
     description: Central DB Service
     parameters:
       service-name: hdi_central_db_employee
     properties:
-      central-db-service-name: '${service-name}'
+      central-db-service-name: "${service-name}"

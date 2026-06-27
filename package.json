@@ -21,7 +21,12 @@
   "private": true,
   "cds": {
     "requires": {
-      "db": "hana",
+      "db": {
+        "kind": "hana"
+      },
+      "hdi_central_db_employee": {
+        "kind": "hana"
+      },
       "auth": {
         "kind": "basic",
         "users": {

@@ -1,5 +1,5 @@
 {
-    "COM_BTP_BE_DEMO_CENTRALDBEMP": {
+    "COM_BTP_BE_DEMO_CENTRAL_DB_EMP": {
         "target": {
             "object": "BTP_V.V_EMPLOYEES",
             "schema": "CENTRALDBEMPLOYEE"

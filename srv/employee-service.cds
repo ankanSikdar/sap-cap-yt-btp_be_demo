@@ -9,6 +9,8 @@ service EmployeeService {
     entity Employees   as select from empdb.EMPLOYEE;
 
     entity Departments as select from empdb.DEPARTMENT;
+
+    entity CentralDBEmployees as select from empdb.CENTRAL_DB_EMP;
 }
 
 annotate EmployeeService.Employees with @(
