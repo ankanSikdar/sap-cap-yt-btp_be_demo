@@ -39,6 +39,11 @@ modules:
       - name: btp_be_demo-db
         properties:
           TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: central_db_employee
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: central-employee-db
+          service: central-db-service-name
 resources:
   - name: btp_be_demo-db
     type: com.sap.xs.hdi-container
